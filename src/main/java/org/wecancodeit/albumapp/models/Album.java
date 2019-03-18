@@ -9,7 +9,7 @@ public class Album {
 	
 	@Id
 	@GeneratedValue
-	private Long id;
+	private Long albumId;
 
 	private String albumTitle;
 
@@ -36,8 +36,8 @@ public class Album {
 	
 
 
-	public Long getId() {
-		return id;
+	public Long getAlbumId() {
+		return albumId;
 	}
 	
 	public String getAlbumTitle() {
