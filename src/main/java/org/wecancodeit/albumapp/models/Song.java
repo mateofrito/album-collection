@@ -10,7 +10,7 @@ public class Song {
 	@Id
 	@GeneratedValue
 	private Long songId;
-	private String title;
+	private String songTitle;
 	private String duration;
 	
 	
@@ -18,23 +18,23 @@ public class Song {
 	
 	public Song() {}
 	
-	public Song(String title, String duration) {
+	public Song(String songTitle, String duration) {
 		
-		this.title = title;
+		this.songTitle = songTitle;
 		this.duration = duration;
 	}
 	public Long getSongId() {
 		return songId;
 	}
-	public String getTitle() {
-		return title;
+	public String getSongTitle() {
+		return songTitle;
 	}
 	public String getDuration() {
 		return duration;
 	}
 	@Override
 	public String toString() {
-		return "Song [songId=" + songId + ", title=" + title + ", duration=" + duration + "]";
+		return "Song [songId=" + songId + ", songTitle=" + songTitle + ", duration=" + duration + "]";
 	}
 	
 	
