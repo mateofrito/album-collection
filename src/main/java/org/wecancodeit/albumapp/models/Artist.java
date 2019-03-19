@@ -12,14 +12,16 @@ public class Artist {
 	private Long artistId;
 	private String artistName;
 	private String artistImage;
+	private int artistRating;
 	
 //	private Album albums;
 	
 	
-	public Artist(String artistName, String artistImage) {
+	public Artist(String artistName, String artistImage, int artistRating) {
 		super();
 		this.artistName = artistName;
 		this.artistImage = artistImage;
+		this.artistRating = artistRating;
 	}
 	public Long getArtistId() {
 		return artistId;
@@ -30,13 +32,13 @@ public class Artist {
 	public String getArtistImage() {
 		return artistImage;
 	}
+	
+	public int getArtistRating() {
+		return artistRating;
+	}
 	@Override
 	public String toString() {
-		return "Artist [artistId=" + artistId + ", artistName=" + artistName + ", artistImage=" + artistImage + "]";
+		return "artistId=" + artistId + ", artistName=" + artistName + ", artistImage=" + artistImage
+				+ ", artistRating=" + artistRating;
 	}
-	
-	
-	
-	
-
 }

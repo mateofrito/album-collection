@@ -16,25 +16,19 @@ public class Album {
 	private String tracks;
 	private String recordLabel;
 	private String albumCover;
+	private int albumRating;
 	
+	public Album() {}
 	
-	public Album() {
-		
-	}
-	
-	
-	public Album(String albumTitle, String tracks, String recordLabel, String albumCover) {
+	public Album(String albumTitle, String tracks, String recordLabel, String albumCover, int albumRating) {
 		
 		this.albumTitle = albumTitle;
 		this.tracks = tracks;
 		this.recordLabel = recordLabel;
 		this.albumCover = albumCover;
+		this.albumRating = albumRating;
 	}
 	
-	
-	
-	
-
 
 	public Long getAlbumId() {
 		return albumId;
@@ -55,11 +49,17 @@ public class Album {
 	public String getAlbumCover() {
 		return albumCover;
 	}
-	
+	public int getAlbumRating() {
+		return albumRating;
+	}
+
+
 	@Override
 	public String toString() {
-		return "Album [albumTitle=" + albumTitle + ", tracks=" + tracks + ", recordLabel=" + recordLabel
-				+ ", albumCover=" + albumCover + "]";
+		return "albumTitle=" + albumTitle + ", tracks=" + tracks + ", recordLabel=" + recordLabel + ", albumCover="
+				+ albumCover + ", albumRating=" + albumRating;
 	}
+	
+
 
 }
