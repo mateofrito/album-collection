@@ -12,16 +12,15 @@ public class Song {
 	private Long songId;
 	private String songTitle;
 	private String duration;
-	
-	
-	
+	private int songRating;
 	
 	public Song() {}
 	
-	public Song(String songTitle, String duration) {
+	public Song(String songTitle, String duration, int songRating) {
 		
 		this.songTitle = songTitle;
 		this.duration = duration;
+		this.songRating = songRating;
 	}
 	public Long getSongId() {
 		return songId;
@@ -32,10 +31,11 @@ public class Song {
 	public String getDuration() {
 		return duration;
 	}
+	public int getSongRating() {
+		return songRating;
+	}
 	@Override
 	public String toString() {
-		return "Song [songId=" + songId + ", songTitle=" + songTitle + ", duration=" + duration + "]";
+		return "songTitle=" + songTitle + ", duration=" + duration + ", songRating=" + songRating;
 	}
-	
-	
 }
