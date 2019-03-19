@@ -1,8 +1,11 @@
 package org.wecancodeit.albumapp.models;
 
+import java.util.Collection;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
 @Entity
 public class Artist {
@@ -14,7 +17,11 @@ public class Artist {
 	private String artistImage;
 	private int artistRating;
 	
-//	private Album albums;
+	@OneToMany(mappedBy="artist")
+	private Collection <Album> albums;
+	
+	
+	
 	
 	
 	public Artist(String artistName, String artistImage, int artistRating) {
@@ -35,6 +42,10 @@ public class Artist {
 	
 	public int getArtistRating() {
 		return artistRating;
+	}
+	
+	public Collection<Album> getAlbums() {
+		return albums;
 	}
 	@Override
 	public String toString() {

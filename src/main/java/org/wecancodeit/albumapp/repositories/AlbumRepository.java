@@ -9,10 +9,5 @@ public interface AlbumRepository extends CrudRepository<Album, Long>{
 	
 	Album findByAlbumTitle(String albumTitle);
 	
-	Album findByTracks(String tracks);
-	
-	Album findByRecordLabel(String recordLabel);
-
-	
 
 }

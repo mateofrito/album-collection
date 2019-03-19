@@ -12,6 +12,10 @@ public class Comment {
 	@GeneratedValue
 	private Long commentId;
 	private String commentContent;
+//	private Artist artist;
+//	private Song song;
+//	private Album album;
+
 	
 
 	public Comment() {}

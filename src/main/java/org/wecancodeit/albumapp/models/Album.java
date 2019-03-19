@@ -1,8 +1,12 @@
 package org.wecancodeit.albumapp.models;
 
+import java.util.Collection;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 
 @Entity
 public class Album {
@@ -13,22 +17,25 @@ public class Album {
 
 	private String albumTitle;
 
-	private String tracks;
-	private String recordLabel;
 	private String albumCover;
 	private int albumRating;
-	
+	@ManyToOne 
+	private Artist artist;
+	@OneToMany(mappedBy="album")
+	private Collection <Song> songs;
 	public Album() {}
 	
-	public Album(String albumTitle, String tracks, String recordLabel, String albumCover, int albumRating) {
-		
+	public Album(String albumTitle, String albumCover, int albumRating,
+			Artist artist) {
 		this.albumTitle = albumTitle;
-		this.tracks = tracks;
-		this.recordLabel = recordLabel;
 		this.albumCover = albumCover;
 		this.albumRating = albumRating;
+		this.artist = artist;
 	}
-	
+
+	public Artist getArtist() {
+		return artist;
+	}
 
 	public Long getAlbumId() {
 		return albumId;
@@ -38,13 +45,6 @@ public class Album {
 		return albumTitle;
 	}
 	
-	public String getTracks() {
-		return tracks;
-	}
-	
-	public String getRecordLabel() {
-		return recordLabel;
-	}
 	
 	public String getAlbumCover() {
 		return albumCover;
@@ -56,8 +56,8 @@ public class Album {
 
 	@Override
 	public String toString() {
-		return "albumTitle=" + albumTitle + ", tracks=" + tracks + ", recordLabel=" + recordLabel + ", albumCover="
-				+ albumCover + ", albumRating=" + albumRating;
+		return "Album [albumTitle=" + albumTitle + ", albumCover=" + albumCover
+				+ ", albumRating=" + albumRating + ", artist=" + artist + "]";
 	}
 	
 
