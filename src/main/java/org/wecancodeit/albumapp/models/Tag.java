@@ -11,7 +11,10 @@ public class Tag {
 	@GeneratedValue
 	private Long tagId;
 	private String tagName;
-	
+//	private Artist artist;
+//	private Song song;
+//	private Album album;
+//	
 	public Tag() {}
 	
 	public Tag(String tagName) {

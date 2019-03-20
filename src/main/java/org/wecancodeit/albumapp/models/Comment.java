@@ -5,33 +5,31 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 @Entity
-public class Comment {
-
-	
+public abstract class Comment {
 	@Id
 	@GeneratedValue
 	private Long commentId;
-	private String commentContent;
-	
 
-	public Comment() {}
-	
-	public Comment(Long commentId, String commentContent) {
+	private String commentContent;
+
+	public Comment() {
+	}
+
+	public Comment(String commentContent) {
 		this.commentContent = commentContent;
 	}
-	
-	
+
 	public Long getCommentId() {
 		return commentId;
 	}
+
 	public String getCommentContent() {
 		return commentContent;
 	}
 
 	@Override
 	public String toString() {
-		return "Comment [commentId=" + commentId + ", commentContent=" + commentContent + "]";
+		return "Comment [commentContent=" + commentContent + "]";
 	}
-	
-	
+
 }

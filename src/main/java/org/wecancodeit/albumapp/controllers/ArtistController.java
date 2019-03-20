@@ -14,6 +14,7 @@ import org.wecancodeit.albumapp.repositories.ArtistRepository;
 @RequestMapping("/artists")
 public class ArtistController {
 	
+	//Resources	
 	@Resource
 	ArtistRepository artistRepo;
 	
