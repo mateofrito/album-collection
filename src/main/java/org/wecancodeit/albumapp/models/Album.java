@@ -23,6 +23,11 @@ public class Album {
 	private Artist artist;
 	@OneToMany(mappedBy="album")
 	private Collection <Song> songs;
+	
+	@OneToMany(mappedBy="album")
+	private Collection <AlbumComment> albumComments;	
+	
+
 	public Album() {}
 	
 	public Album(String albumTitle, String albumCover, int albumRating,
@@ -35,6 +40,14 @@ public class Album {
 
 	public Artist getArtist() {
 		return artist;
+	}
+	
+	public Collection<Song> getSongs() {
+		return songs;
+	}
+	
+	public Collection<AlbumComment> getAlbumComments() {
+		return albumComments;
 	}
 
 	public Long getAlbumId() {
