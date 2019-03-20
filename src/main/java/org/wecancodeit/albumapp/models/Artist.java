@@ -21,21 +21,28 @@ public class Artist {
 	private Collection <Album> albums;
 	
 	
+	@OneToMany(mappedBy="artist")
+	private Collection <ArtistComment> artistComments;	
 	
-	
-	
+
 	public Artist(String artistName, String artistImage, int artistRating) {
-		super();
 		this.artistName = artistName;
 		this.artistImage = artistImage;
 		this.artistRating = artistRating;
 	}
+	
+	public Collection<ArtistComment> getArtistComments() {
+		return artistComments;
+	}
+	
 	public Long getArtistId() {
 		return artistId;
 	}
+	
 	public String getArtistName() {
 		return artistName;
 	}
+	
 	public String getArtistImage() {
 		return artistImage;
 	}
@@ -47,6 +54,7 @@ public class Artist {
 	public Collection<Album> getAlbums() {
 		return albums;
 	}
+	
 	@Override
 	public String toString() {
 		return "artistId=" + artistId + ", artistName=" + artistName + ", artistImage=" + artistImage

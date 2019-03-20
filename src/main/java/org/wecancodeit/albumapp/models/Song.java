@@ -1,9 +1,12 @@
 package org.wecancodeit.albumapp.models;
 
+import java.util.Collection;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 
 @Entity
 public class Song {
@@ -16,6 +19,10 @@ public class Song {
 	private int songRating;
 	@ManyToOne
 	private Album album;
+	
+	@OneToMany(mappedBy="song")
+	private Collection <SongComment> songComments;	
+	
 	
 	public Album getAlbum() {
 		return album;
@@ -40,6 +47,10 @@ public class Song {
 	public String getDuration() {
 		return duration;
 	}
+	public Collection<SongComment> getSongComments() {
+		return songComments;
+	}
+
 	public int getSongRating() {
 		return songRating;
 	}
