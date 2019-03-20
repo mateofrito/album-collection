@@ -8,30 +8,29 @@ import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 @Entity
 public class Album {
-	
+
 	@Id
 	@GeneratedValue
 	private Long albumId;
-
 	private String albumTitle;
-
 	private String albumCover;
 	private int albumRating;
-	@ManyToOne 
+	@ManyToOne
+	@JsonIgnore
 	private Artist artist;
-	@OneToMany(mappedBy="album")
-	private Collection <Song> songs;
-	
-	@OneToMany(mappedBy="album")
-	private Collection <AlbumComment> albumComments;	
-	
+	@OneToMany(mappedBy = "album")
+	private Collection<Song> songs;
+	@OneToMany(mappedBy = "album")
+	private Collection<AlbumComment> albumComments;
 
-	public Album() {}
-	
-	public Album(String albumTitle, String albumCover, int albumRating,
-			Artist artist) {
+	public Album() {
+	}
+
+	public Album(String albumTitle, String albumCover, int albumRating, Artist artist) {
 		this.albumTitle = albumTitle;
 		this.albumCover = albumCover;
 		this.albumRating = albumRating;
@@ -41,11 +40,11 @@ public class Album {
 	public Artist getArtist() {
 		return artist;
 	}
-	
+
 	public Collection<Song> getSongs() {
 		return songs;
 	}
-	
+
 	public Collection<AlbumComment> getAlbumComments() {
 		return albumComments;
 	}
@@ -53,26 +52,23 @@ public class Album {
 	public Long getAlbumId() {
 		return albumId;
 	}
-	
+
 	public String getAlbumTitle() {
 		return albumTitle;
 	}
-	
-	
+
 	public String getAlbumCover() {
 		return albumCover;
 	}
+
 	public int getAlbumRating() {
 		return albumRating;
 	}
 
-
 	@Override
 	public String toString() {
-		return "Album [albumTitle=" + albumTitle + ", albumCover=" + albumCover
-				+ ", albumRating=" + albumRating + ", artist=" + artist + "]";
+		return "Album [albumTitle=" + albumTitle + ", albumCover=" + albumCover + ", albumRating=" + albumRating
+				+ ", artist=" + artist + "]";
 	}
-	
-
 
 }

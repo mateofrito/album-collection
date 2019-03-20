@@ -16,15 +16,13 @@ public class Artist {
 	private String artistName;
 	private String artistImage;
 	private int artistRating;
-	
 	@OneToMany(mappedBy="artist")
 	private Collection <Album> albums;
-	
-	
 	@OneToMany(mappedBy="artist")
 	private Collection <ArtistComment> artistComments;	
 	
-
+	public Artist() {}
+	
 	public Artist(String artistName, String artistImage, int artistRating) {
 		this.artistName = artistName;
 		this.artistImage = artistImage;
