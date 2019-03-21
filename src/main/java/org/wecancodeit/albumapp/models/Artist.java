@@ -5,6 +5,7 @@ import java.util.Collection;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.Lob;
 import javax.persistence.OneToMany;
 
 @Entity
@@ -14,6 +15,7 @@ public class Artist {
 	@GeneratedValue
 	private Long artistId;
 	private String artistName;
+	@Lob
 	private String artistImage;
 	private int artistRating;
 	@OneToMany(mappedBy="artist")

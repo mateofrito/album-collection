@@ -9,13 +9,16 @@ fetch("/artists")
     artists.forEach(artist => {
       content += `
 			 	<li class="artist">
-			 		<h3 class="artist__name">${artist.artistName}</h3>
+           <h3 class="artist__name">${artist.artistName}</h3>
+           <img src=${artist.artistImage} alt="image">
 			 		<ul class="albums">
 			 			${artist.albums
               .map(album => {
                 return `
 								<li class="album">
                   <h5 class="album__title">${album.albumTitle}</h5>
+
+                  <img src=${album.albumCover} alt="image">
                   <ul class="albums">
                     ${album.songs
                     .map(song => {
@@ -36,6 +39,6 @@ fetch("/artists")
 		 	`;
     });
     content += `</ul>`;
-    app.innerHTML = commentsContent;
+    app.innerHTML = content;
   })
   .catch(err => console.log(err));

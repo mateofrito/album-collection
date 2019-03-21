@@ -28,8 +28,8 @@ public class Initializer implements CommandLineRunner {
 	
 	@Override
 	public void run(String... args) throws Exception {
-		Artist TestArtist= artistRepo.save(new Artist("George", "Image", 5));
-		Album TestAlbum= albumRepo.save(new Album("Album Title", "Album Cover", 10,
+		Artist TestArtist= artistRepo.save(new Artist("George", "https://www.billboard.com/files/styles/1024x577/public/video/1125911414_5752158355001_5752141773001-vs.jpg", 5));
+		Album TestAlbum= albumRepo.save(new Album("Album Title", "https://i.ytimg.com/vi/p5rQHoaQpTw/hqdefault.jpg", 10,
 				TestArtist));
 		Song TestSong = songRepo.save(new Song("Test Song", "duration", 10, TestAlbum));
 		
