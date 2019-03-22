@@ -3,8 +3,7 @@ export default function Songs(songs) {
         .map(song => {
             return `
                 <li class="song">
-                    <h5 class="book__title">${book.title}</h5>
-                    <p class="book__description">${book.description}</p>
+                    <h5 class="song__title">${song.songTitle}</h5>
                 </li>
             `;
         }).join('')

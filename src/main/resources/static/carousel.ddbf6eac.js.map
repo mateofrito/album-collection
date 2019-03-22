@@ -1,1 +1,0 @@
-{"version":3,"sources":["../js/carousel.js"],"names":["carousel","document","querySelector"],"mappings":";AAEA,IAAMA,EAAWC,SAASC,cAAc","file":"carousel.ddbf6eac.js","sourceRoot":"..\\src\\main\\resources\\static\\html","sourcesContent":["//Image Carousel\r\n\r\nconst carousel = document.querySelector(\"#carousel\");\r\n"]}
