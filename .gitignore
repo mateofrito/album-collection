@@ -115,4 +115,6 @@ gradle-app.setting
 ### Gradle Patch ###
 **/build/
 
+/node_modules/
+
 # End of https://www.gitignore.io/api/java,gradle,eclipse
