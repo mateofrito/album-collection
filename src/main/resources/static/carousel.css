@@ -1,0 +1,44 @@
+@charset "ISO-8859-1";
+
+#carousel-container{
+    padding-top: 30px;
+    height: 79vh;
+    width: 40%;
+    margin: auto;   
+    overflow: hidden;
+    position: relative; 
+    padding-bottom: -2rem;
+    
+}
+
+#carousel-slide{
+    text-align: center;
+    color: white;
+    display: flex;
+    width:100%;
+    height:360px;
+    padding-bottom: 10rem;
+}
+
+
+#prevBtn{
+    position: absolute;
+    top: 30%;
+    z-index: 10;
+    left: 1%;
+    font-size: 30px;
+    color: white;
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+#nextBtn{
+    position: absolute;
+    top: 30%;
+    z-index: 10;
+    right: 1%;
+    font-size: 30px;
+    color: white;
+    opacity: 0.5;
+    cursor: pointer;
+}

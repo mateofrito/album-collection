@@ -1,17 +1,33 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link rel="stylesheet" type="text/css" href="carousel.css">
+<title>Document</title>
 </head>
 <body>
-<h1>THE SUPER IRONIC ALBUM TRACKER MACHINE</h1>
-<blockquote>The goddamn server works</blockquote>
-<div id="app"></div>
-<div id="carousel"></div>
-<script src="/app.js"></script>
-<script src="/carousel.js"></script>
+	<h1>THE SUPER IRONIC ALBUM TRACKER MACHINE</h1>
+	<blockquote>The goddamn server works</blockquote>
+	<div id="app"></div>
+
+	<div id="carousel-container">
+	
+		<i class="fa fa-arrow-left" id="prevBtn" aria-hidden="true"></i> 
+		<i class="fa fa-arrow-right" id="nextBtn" aria-hidden="true"></i>
+
+		<div id="carousel-slide">
+			<img src="https://cdn.viagogo.net/img/cat/4508/1/37.jpg" id="lastClone" alt="lastAlbum">
+			<img src="https://www.billboard.com/files/styles/1024x577/public/video/1125911414_5752158355001_5752141773001-vs.jpg" alt="album one">
+			<img src="https://images-na.ssl-images-amazon.com/images/I/41PQHIa%2BxQL.jpg" alt="album one">
+			<img src="https://www.billboard.com/files/styles/1024x577/public/video/1125911414_5752158355001_5752141773001-vs.jpg" id="firstClone" alt="firstAlbum">
+		</div>
+
+	</div>
+	
+	<script src="/app.js"></script>
+	<script src="/carousel.js"></script>
+	<script src="https://use.fontawesome.com/827f403702.js"></script>
 </body>
 </html>
