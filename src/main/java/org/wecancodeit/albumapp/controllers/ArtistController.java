@@ -4,7 +4,11 @@ import java.util.Collection;
 
 import javax.annotation.Resource;
 
+import org.json.JSONException;
+import org.json.JSONObject;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.wecancodeit.albumapp.models.Artist;
@@ -23,5 +27,14 @@ public class ArtistController {
 		return (Collection<Artist>)artistRepo.findAll();
 		
 	}
-
+	
+	@PostMapping("/add")
+	public Collection<Artist>addArtist(@RequestBody String body) throws JSONException {
+		JSONObject newArtist = new JSONObject(body);
+	String artistName = newArtist.getString("artistName");
+	String artistImage =newArtist.getString("artistImage");
+	int artistRating =Integer.parseInt(newArtist.getString("artistRating"));
+	artistRepo.save(new Artist (artistName, artistImage, artistRating ));
+		return (Collection<Artist>)artistRepo.findAll();
+}
 }

@@ -15,5 +15,11 @@ export default function Artists(artists) {
             `;
     }).join('')}
     </ul>
-  `
+    <section class="add-artist">
+    <input class= "add-artist__artistName" type = "text" placeholder= "Artist Name">
+    <input class= "add-artist__artistImage" type = "text" placeholder= "Artist Image">
+    <input class= "add-artist__artistRating" type = "text" placeholder= "Artist Rating">
+    <button class="add-artist__submit">Submit</button>
+    </section>
+  `;
 }
