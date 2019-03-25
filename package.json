@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-  	"build": "parcel build src/main/resources/static/html/index.html && rm src/main/resources/static/*.html && rm src/main/resources/static/*.js && rm src/main/resources/static/*.js.map && rm src/main/resources/static/*.css && rm src/main/resources/static/*.css.map && mv ./dist/* src/main/resources/static && rm -rf ./dist",
+    "build": "parcel build src/main/resources/static/html/index.html && rm src/main/resources/static/*.html && rm src/main/resources/static/*.js && rm src/main/resources/static/*.js.map && rm src/main/resources/static/*.css && rm src/main/resources/static/*.css.map && mv ./dist/* src/main/resources/static && rm -rf ./dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
