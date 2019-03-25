@@ -8,6 +8,7 @@ main()
 
 function main() {
   api.getRequest('/artists', artists => {
+    console.log(artists)
     getAppContext().innerHTML = Artists(artists);
   })
   events.on(getAppContext(), 'click', () => {
@@ -26,13 +27,13 @@ function main() {
 
   events.on(getAppContext(), 'click', ()=>{
     if(event.target.classList.contains('add-album__submit')){
-      const albumName = document.querySelector('.add-album__albumTitle').value
+      const albumTitle = document.querySelector('.add-album__albumTitle').value
       const albumCover = document.querySelector('.add-album__albumCover').value
       const albumRating = document.querySelector('.add-album__albumRating').value
       const artist = document.querySelector('.add-album__artist').value
 
       api.postRequest('/albums/add', {
-        albumName:albumName,
+        albumTitle:albumTitle,
         albumCover:albumCover,
         albumRating:albumRating,
         artist:artist
@@ -51,7 +52,7 @@ function main() {
         songTitle:songTitle,
         album:album,
         duration:duration,
-        songRating:songRating,    
+        songRating:songRating,
         }, (artists) => getAppContext().innerHTML= Artists(artists))
     }
   })
