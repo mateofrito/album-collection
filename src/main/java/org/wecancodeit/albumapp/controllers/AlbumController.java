@@ -33,7 +33,7 @@ public class AlbumController {
 	}
 
 	@PostMapping("/add")
-	public Collection<Album>addAlbum(@RequestBody String body) throws JSONException {
+	public Collection<Artist>addAlbum(@RequestBody String body) throws JSONException {
 		
 		JSONObject newAlbum = new JSONObject(body);
 	String albumTitle = newAlbum.getString("albumTitle");
@@ -41,6 +41,6 @@ public class AlbumController {
 	int albumRating = Integer.parseInt(newAlbum.getString("albumRating"));
 	Artist artist = artistRepo.findByArtistName(newAlbum.getString("artist"));
 	albumRepo.save(new Album (albumTitle, albumCover, albumRating, artist));
-		return (Collection<Album>)albumRepo.findAll();
+		return (Collection<Artist>)artistRepo.findAll();
 	}
 }

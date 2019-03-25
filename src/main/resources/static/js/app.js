@@ -8,6 +8,7 @@ main()
 
 function main() {
   api.getRequest('/artists', artists => {
+    console.log(artists)
     getAppContext().innerHTML = Artists(artists);
   })
   events.on(getAppContext(), 'click', ()=>{
