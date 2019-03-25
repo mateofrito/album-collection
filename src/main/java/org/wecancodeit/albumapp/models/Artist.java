@@ -1,5 +1,6 @@
 package org.wecancodeit.albumapp.models;
 
+import java.util.ArrayList;
 import java.util.Collection;
 
 import javax.persistence.Entity;
@@ -29,6 +30,7 @@ public class Artist {
 		this.artistName = artistName;
 		this.artistImage = artistImage;
 		this.artistRating = artistRating;
+		this.albums = new ArrayList<Album>();
 	}
 	
 	public Collection<ArtistComment> getArtistComments() {
