@@ -13,4 +13,4 @@ parcelRequire=function(e,r,t,n){var i,o="function"==typeof parcelRequire&&parcel
 },{"./Albums":"Th3n"}],"GFX4":[function(require,module,exports) {
 "use strict";require("../css/styling.css");var t=r(require("./utils/events/event-action")),e=r(require("./utils/api/api-action")),a=r(require("./components/Artists"));function r(t){return t&&t.__esModule?t:{default:t}}function i(){e.default.getRequest("/artists",function(t){u().innerHTML=(0,a.default)(t)}),t.default.on(u(),"click",function(){if(event.target.classList.contains("add-artist__submit")){var t=document.querySelector(".add-artist__artistName").value,r=document.querySelector(".add-artist__artistImage").value,i=document.querySelector(".add-artist__artistRating").value;e.default.postRequest("/artists/add",{artistName:t,artistImage:r,artistRating:i},function(t){return u().innerHTML=(0,a.default)(t)})}})}function u(){return document.querySelector("#app")}i();
 },{"../css/styling.css":"cKmy","./utils/events/event-action":"C5AY","./utils/api/api-action":"9pZY","./components/Artists":"AE3x"}]},{},["GFX4"], null)
-//# sourceMappingURL=/app.9274d3ca.js.map
+//# sourceMappingURL=/app.c92dca33.js.map
