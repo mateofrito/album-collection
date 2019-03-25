@@ -14,5 +14,6 @@ export default function Albums(albums) {
                 </li>
             `;
     }).join('')}
-    </ul>`
+    </ul>
+  `;
 }

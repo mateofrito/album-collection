@@ -23,6 +23,38 @@ function main() {
       }, (artists) => getAppContext().innerHTML= Artists(artists))
     }
   })
+
+  events.on(getAppContext(), 'click', ()=>{
+    if(event.target.classList.contains('add-album__submit')){
+      const albumName = document.querySelector('.add-album__albumTitle').value
+      const albumCover = document.querySelector('.add-album__albumCover').value
+      const albumRating = document.querySelector('.add-album__albumRating').value
+      const artist = document.querySelector('.add-album__artist').value
+
+      api.postRequest('/albums/add', {
+        albumName:albumName,
+        albumCover:albumCover,
+        albumRating:albumRating,
+        artist:artist
+      }, (artists) => getAppContext().innerHTML= Artists(artists))
+    }
+  })
+
+  events.on(getAppContext(), 'click', ()=>{
+    if(event.target.classList.contains('add-song__submit')){
+      const songTitle = document.querySelector('.add-song__songTitle').value
+      const album = document.querySelector('.add-song__album').value
+      const duration = document.querySelector('.add-song__duration').value
+      const songRating = document.querySelector('.add-song__songRating').value
+
+      api.postRequest('/songs/add', {
+        songTitle:songTitle,
+        album:album,
+        duration:duration,
+        songRating:songRating,    
+        }, (artists) => getAppContext().innerHTML= Artists(artists))
+    }
+  })
 }
 
 function getAppContext() {
