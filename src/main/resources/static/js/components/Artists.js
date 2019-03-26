@@ -6,11 +6,12 @@ export default function Artists(artists) {
         ${artists.map(artist => {
         return `
                 <li class="artist">
-                <img class="artist__image" src="${artist.artistImage}" alt="Artist Image">
+                <div class="image-container">
+                <img class="artist__image" src="${artist.artistImage}" alt="Artist Image"></div>
                 <h3 class="artist__name">${artist.artistName}</h3>
-                <ul class="albums">
-                    ${Albums(artist.albums)}
-                </ul>
+                <!--unused <ul class="albums">
+                ${Albums(artist.albums)}
+                </ul> -->
                 </li>
             `;
     }).join('')}
@@ -22,7 +23,7 @@ export default function Artists(artists) {
     <button class="add-artist__submit">Submit</button>
     </section>
 
-    <section class="add-albums">
+   <!--unused sections <section class="add-albums">
     <input class= "add-album__albumTitle" type = "text" placeholder= "Album Title">
     <input class= "add-album__albumCover" type = "text" placeholder= "Album Image">
     <input class= "add-album__albumRating" type = "text" placeholder= "Album Rating">
@@ -36,6 +37,6 @@ export default function Artists(artists) {
     <input class= "add-song__duration" type = "text" placeholder= "Song Duration">
     <input class= "add-song__songRating" type = "text" placeholder= "Song Rating">
     <button class="add-song__submit">Submit</button>
-    </section>
+    </section>  -->
   `;
 }
