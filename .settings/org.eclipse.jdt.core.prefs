@@ -1,13 +1,20 @@
 #
+<<<<<<< HEAD
+#Mon Mar 25 13:37:41 EDT 2019
+=======
 #Mon Mar 25 14:32:44 EDT 2019
+>>>>>>> 81cafbe7302149c3d4bcac69234d254dbe527c9f
 org.eclipse.jdt.core.compiler.debug.localVariable=generate
+>>>>>>>=f87be4d2bbb34755818134ac870cb9cff229363f
 org.eclipse.jdt.core.compiler.compliance=1.8
 org.eclipse.jdt.core.compiler.codegen.unusedLocal=preserve
+<<<<<<<=HEAD
 org.eclipse.jdt.core.compiler.debug.sourceFile=generate
 org.eclipse.jdt.core.compiler.codegen.targetPlatform=1.8
 org.eclipse.jdt.core.compiler.problem.enumIdentifier=error
-org.eclipse.jdt.core.compiler.debug.lineNumber=generate
 eclipse.preferences.version=1
+org.eclipse.jdt.core.compiler.debug.lineNumber=generate
 org.eclipse.jdt.core.compiler.codegen.inlineJsrBytecode=enabled
 org.eclipse.jdt.core.compiler.source=1.8
 org.eclipse.jdt.core.compiler.problem.assertIdentifier=error
+=\=\=\=\=\=\=

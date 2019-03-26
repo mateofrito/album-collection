@@ -11,7 +11,7 @@ function main() {
     console.log(artists)
     getAppContext().innerHTML = Artists(artists);
   })
-  events.on(getAppContext(), 'click', ()=>{
+  events.on(getAppContext(), 'click', () => {
     if(event.target.classList.contains('add-artist__submit')){
       const artistName = document.querySelector('.add-artist__artistName').value
       const artistImage = document.querySelector('.add-artist__artistImage').value
